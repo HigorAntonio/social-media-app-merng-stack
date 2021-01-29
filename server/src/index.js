@@ -9,6 +9,7 @@ const MONGODB = process.env.MONGODB;
 const server = new ApolloServer({
   typeDefs,
   resolvers,
+  context: ({ req }) => ({ req }),
 });
 
 mongoose
